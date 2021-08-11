@@ -1,0 +1,29 @@
+@import "scss/index";
+
+.body{
+  background: url('../../public/img/Main/nightsky.svg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.root{
+  position: relative;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.grass{
+  position: absolute;
+  bottom: 0;
+}
+
+.textBlock{
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 66px;
+  color: #FFFFFF;
+}

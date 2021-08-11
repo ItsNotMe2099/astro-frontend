@@ -1,0 +1,52 @@
+@import "scss/index";
+
+.root{
+ height: 65px;
+ display: flex;
+ align-items: center;
+ margin-top: 32px;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  svg{
+    margin-right: 13px;
+  }
+}
+
+.title{
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  color: #bcbed3;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 15px;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+}
+
+.firstBtn{
+  margin-right: 10px;
+}

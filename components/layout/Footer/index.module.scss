@@ -1,0 +1,168 @@
+@import "scss/index";
+
+.root{
+  display: flex;
+  padding-top: 51px;
+  padding-left: 51px;
+  padding-right: 51px;
+  padding-bottom: 53px;
+  background: #F4F4F4;
+  @media screen and (max-width: 1125px){
+    flex-direction: column;
+  }
+  @media screen and (max-width: $sm-min){
+    padding-bottom: 47px;
+    padding-left: 43px;
+    padding-top: 37px;
+  }
+}
+
+.copyright{
+  font-size: 16px;
+  line-height: 19px;
+  color: #8D8D8D;
+  font-family: 'Roboto';
+  padding: 12px 0;
+  text-align: center;
+}
+
+.menu{
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  @media screen and (max-width: $sm-min){
+    flex-direction: column;
+  }
+}
+
+.title{
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.41em;
+  color: #000000;
+  text-align: center;
+}
+
+.moscow{
+  font-weight: 600;
+  font-size: 14.4259px;
+  line-height: 18px;
+  letter-spacing: 0.165em;
+  color: #000000;
+  text-align: center;
+}
+
+.desc{
+  font-size: 15px;
+  line-height: 20px;
+  color: #4D4D4D;
+  font-family: 'Roboto';
+  margin-top: 31px;
+  padding: 0 40px;
+  @media screen and (max-width: 1125px){
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (max-width: $sm-min){
+    padding: 0;
+  }
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1125px){
+    margin-bottom: 20px;
+  }
+}
+
+.phone{
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  padding-left: 40px;
+  img{
+    margin-right: 16px;
+  }
+  @media screen and (max-width: 1125px){
+    justify-content: center;
+    padding-left: 0;
+  }
+  @media screen and (max-width: 375px){
+    justify-content: flex-start;
+  }
+}
+
+.email{
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  img{
+    margin-right: 16px;
+  }
+}
+
+.text{
+  font-size: 16px;
+  line-height: 19px;
+  color: #4D4D4D;
+  font-family: 'Roboto';
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.textLoc{
+  font-size: 16px;
+  line-height: 19px;
+  color: #4D4D4D;
+  font-family: 'Roboto';
+}
+
+.icon{
+  margin-right: 16px;
+  svg{
+    fill: #000;
+    &:hover{
+      fill: #4D4D4D;
+    }
+  }
+}
+
+.head{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  font-family: 'Roboto';
+}
+
+.shop{
+  display: flex;
+  flex-direction: column;
+  .text{
+    margin-top: 16px;
+    color: #636363;
+  }
+  @media screen and (max-width: $sm-min){
+    margin-top: 70px;
+  }
+}
+
+.right{
+  @media screen and (max-width: $sm-min){
+    margin-top: 70px;
+  }
+}
+
+.social{
+  margin-top: 19px;
+  margin-bottom: 56px;
+}
+
+.footer{
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
