@@ -1,0 +1,58 @@
+@import "scss/index";
+
+.root{
+  position: relative;
+}
+
+.dots{
+  margin: auto;
+  display: flex;
+  svg{
+    circle{
+      fill: #E57B7B;
+    }
+  }
+}
+
+.dropDownTrigger{
+  width: 41px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover{
+    border: 2px solid #E57B7B;
+    border-radius: 6px;
+  }
+}
+
+.dropDown {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  margin-top: 4px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 3px;
+  z-index: 5;
+  min-width: 178px;
+  display: flex;
+  flex-direction: column;
+  right: 0px;
+  a{
+    color: #000 !important;
+    padding: 5px 10px;
+  }
+}
+
+.dropDownActive{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  background: #fff;
+  border-radius: 3px;
+  min-width: 259px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

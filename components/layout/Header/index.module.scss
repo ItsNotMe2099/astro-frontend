@@ -5,6 +5,10 @@
  display: flex;
  align-items: center;
  margin-top: 32px;
+ justify-content: center;
+ position: fixed;
+ z-index: 100;
+ width: 100%;
 }
 
 .container{
@@ -12,7 +16,15 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.scrolled{
+  background: #000000;
+  margin-top: 0;
+}
+
+.black{
+  background-color: #000 !important;
 }
 
 .logo{
@@ -29,17 +41,11 @@
   color: #FFFFFF;
 }
 
-.menu{
-  display: flex;
-  align-items: center;
-}
-
 .item{
-  color: #bcbed3;
+  color: #bcbed3 !important;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  margin: 0 15px;
 }
 
 .btns{
@@ -49,4 +55,17 @@
 
 .firstBtn{
   margin-right: 10px;
+}
+
+.list{
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow-x: clip;
+  clip: auto;
+  margin: 0 5%;
+
 }
