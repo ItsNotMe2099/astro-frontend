@@ -5,6 +5,16 @@
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
+  @media screen and (max-width: 475px){
+    background: url('../../public/img/Main/nightskyMobile.svg');
+    background-attachment: fixed;
+    background-size: contain;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+  }
+  @media screen and (max-width: 375px){
+    background-size: auto;
+  }
 }
 
 .root{
@@ -38,13 +48,29 @@
   width: 65%;
   margin: 0 auto;
   justify-content: flex-end;
+  @media screen and (max-width: 475px){
+    justify-content: space-between;
+    height: 69px;
+    margin-top: 60px;
+  }
 }
 
 .cloud{
   margin-top: 5%;
   margin-left: -8%;
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1100px) and (min-width: 476px){
     display: none;
+  }
+  @media screen and (max-width: 475px){
+    display: block;
+    position: absolute;
+    left: -70px;
+    margin: 0;
+    bottom: 55%;
+    img{
+      width: 88px;
+      height: 33px;
+    }
   }
 }
 
@@ -52,26 +78,81 @@
   position: absolute;
   right: 0;
   bottom: 50%;
+  @media screen and (max-width: 475px){
+    display: none;
+  }
+}
+
+.cloudsRightMobile{
+  @media screen and (min-width: 476px){
+    display: none;
+  }
+  @media screen and (max-width: 475px){
+    position: absolute;
+    right: 0;
+    bottom: 35%;
+  }
 }
 
 .cloudsLeft{
   position: absolute;
   left: 0;
   bottom: 50%;
+  @media screen and (max-width: 475px){
+    display: none;
+  }
 }
 
 .comet{
   margin-right: 8%;
+  @media screen and (max-width: 475px){
+    margin-right: 0;
+    img{
+      width: 65px;
+      height: 17px;
+    }
+  }
+}
+
+.moon{
+  @media screen and (max-width: 475px){
+    img{
+      width: 35px;
+      height: 34px;
+    }
+  }
 }
 
 .stargazer{
   position: relative;
   z-index: 1;
+  @media screen and (max-width: 475px){
+    position: static;
+    img{
+      width: 158px;
+      height: 333px;
+      padding-top: 50px;
+    }
+  }
 }
 
 .hills{
   position: absolute;
   bottom: 0;
+  @media screen and (max-width: 475px){
+    z-index: 2;
+    img{
+      width: 475px;
+      height: 98px;
+    }
+  }
+  @media screen and (max-width: 375px){
+    z-index: 2;
+    img{
+      width: 375px;
+      height: 98px;
+    }
+  }
 }
 
 .grass{
@@ -80,6 +161,20 @@
   z-index: 2;
   @media screen and (max-width: 1280px){
     left: -50%;
+  }
+  @media screen and (max-width: 475px){
+    left: 0;
+    img{
+      width: 475px;
+      height: 98px;
+    }
+  }
+  @media screen and (max-width: 375px){
+    left: 0;
+    img{
+      width: 375px;
+      height: 98px;
+    }
   }
 }
 
@@ -90,12 +185,36 @@
   color: #FFFFFF;
   position: relative;
   z-index: 1;
+  @media screen and (max-width: 475px){
+    display: none;
+  }
+}
+
+.textBlockMobile{
+  background-color: #020a1d;
+  margin-top: -15px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 11px;
+  @media screen and (min-width: 476px){
+    display: none;
+  }
 }
 
 .btns{
   display: flex;
   align-items: center;
   margin-top: 32px;
+  @media screen and (max-width: 630px){
+    flex-direction: column;
+    .firstBtn{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .firstBtn{

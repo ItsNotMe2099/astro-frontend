@@ -2,16 +2,21 @@ import Logo from 'components/svg/Logo'
 import styles from './index.module.scss'
 import Link from 'next/link'
 import Button from 'components/ui/Button'
+import { useEffect } from 'react'
 
 interface Props {}
 
+
 export default function Main(props: Props) {
-  
+
   return (
     <body className={styles.body}>
       <div className={styles.root}>
         <div className={styles.cloudsRight}>
           <img src='/img/Main/cloudsRight.svg' alt=''/>
+        </div>
+        <div className={styles.cloudsRightMobile}>
+          <img src='/img/Main/cloudsRightMobile.svg' alt=''/>
         </div>
         <div className={styles.cloudsLeft}>
           <img src='/img/Main/cloudsLeft.svg' alt=''/>
@@ -48,6 +53,13 @@ export default function Main(props: Props) {
           </div>
         </div>
       </div>
+      <div className={styles.textBlockMobile}>
+        <span>Приложение которое<br/> улучшит вашу жизнь</span>
+          <div className={styles.btns}>
+            <div className={styles.firstBtn}><Button image='/img/Main/google.svg' size='noPadding'/></div>
+            <Button image='/img/Main/apple.svg' size='noPadding'/>
+          </div>
+        </div>
     </body>
   )
 }

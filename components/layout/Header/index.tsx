@@ -6,6 +6,8 @@ import DynamicOverflow from 'utils/DynamicOverflow'
 import ButtonDotsWithOverflow from 'components/ui/Button/ButtonDotsWithOverflow';
 import cx from 'classnames'
 import { useEffect, useState } from 'react'
+import MenuMobile from 'components/svg/MenuMobile'
+import MenuMobileClose from 'components/svg/MenuMobileClose'
 
 interface Props {}
 
@@ -22,6 +24,7 @@ export default function Header(props: Props) {
 ]
 
 const [isScrolled, setIsScrolled] = useState(false)
+const [isMenuMobileOpen, setMenuMobileOpen] = useState(false)
 
 const handleScroll = () => {
   if (window.pageYOffset > 0) {
@@ -32,18 +35,44 @@ const handleScroll = () => {
   }
 }
 
+const handleOpenMobileMenu = () => {
+  if (process.browser) {
+    document.body.classList.add('modal-open')
+  }
+
+  setMenuMobileOpen(true)
+}
+
+const handleCloseMobileMenu = () => {
+  if (process.browser) {
+    document.body.classList.remove('modal-open')
+  }
+  setMenuMobileOpen(false)
+}
+
+const handleClearBodyClass = () => {
+  if (process.browser) {
+    document.body.classList.remove('modal-open')
+  }
+}
+
 useEffect(() => {
   window.addEventListener("scroll", handleScroll);
 })
 
 
   return (
-    <div className={cx(styles.root, {[styles.scrolled]: isScrolled})}>
+    <>
+    <div className={cx(styles.desktop, {[styles.scrolled]: isScrolled})}>
       <div className={styles.container}>
+      <Link href="/">
+        <a>
         <div className={styles.logo}>
           <Logo/>
           <div className={styles.title}>Starmoon</div>
         </div>
+        </a>
+        </Link>
         <DynamicOverflow
           list={({ nodeRef }) => [
             ...options.map((item, index) => (
@@ -83,5 +112,50 @@ useEffect(() => {
         </div>
       </div>
     </div>
+    <div className={styles.headerMobile}>
+        <div className={styles.container}>
+          <Link href="/">
+            <a>
+            <div className={styles.logo}>
+              <Logo/>
+            <div className={styles.title}>Starmoon</div>
+            </div>
+            </a>
+          </Link>
+        {!isMenuMobileOpen && (
+          <div
+            className={styles.menuOpen}
+            onClick={handleOpenMobileMenu}
+          >
+            <MenuMobile/>
+          </div>
+        )}
+        {isMenuMobileOpen && (
+          <div className={styles.menuOpen} onClick={handleCloseMobileMenu}>
+            <MenuMobileClose />
+          </div>
+        )}
+         {isMenuMobileOpen && (
+        <div className={styles.dropdownMobile}>
+          <div className={styles.btns}>
+            <div className={styles.firstBtn}>
+              <Button className={styles.black} variant='outlined' wrapper size='small' fontColor='pink'>вход</Button>
+            </div>
+            <Button size='small' color='fill'>регистрация</Button>
+          </div>
+            <div className={styles.list}>
+              {options.map((item) => (
+                <Link href={item.link}>
+                  <a onClick={handleClearBodyClass} className={styles.item} href={item.link}>
+                    {item.label}
+                  </a>
+                </Link>
+              ))}
+            </div>
+        </div>
+      )}
+        </div>
+        </div>
+    </>
   )
 }
