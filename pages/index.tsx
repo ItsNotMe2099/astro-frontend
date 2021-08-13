@@ -1,3 +1,4 @@
+import Footer from 'components/layout/Footer'
 import Header from 'components/layout/Header'
 import Layout from 'components/layout/Layout'
 import Main from 'components/Main'
@@ -10,6 +11,7 @@ export default function Home(props) {
       <div className={styles.root}>
         <Main/>
       </div>
+      <Footer/>
     </Layout>
   )
 }

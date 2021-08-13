@@ -1,29 +1,40 @@
 @import "scss/index";
 
+.default{
+  background-color: #212968;
+}
+
 .root{
   display: flex;
-  padding-top: 51px;
-  padding-left: 51px;
-  padding-right: 51px;
-  padding-bottom: 53px;
-  background: #F4F4F4;
-  @media screen and (max-width: 1125px){
+  padding-left: 70px;
+  padding-right: 172px;
+  padding-top: 46px;
+  padding-bottom: 88px;
+  background: linear-gradient(180deg, #172463 0%, rgba(100, 74, 172, 0.3) 47.92%, rgba(83, 128, 223, 0) 100%);
+  @media screen and (max-width: 1280px){
     flex-direction: column;
+    padding-right: 70px;
+  }
+  @media screen and (max-width: 950px){
+    padding-right: 15px;
+    padding-left: 15px;
   }
   @media screen and (max-width: $sm-min){
-    padding-bottom: 47px;
+    padding-bottom: 19px;
     padding-left: 43px;
-    padding-top: 37px;
+    padding-top: 35px;
+    padding-right: 50px;
   }
 }
 
 .copyright{
   font-size: 16px;
   line-height: 19px;
-  color: #8D8D8D;
+  color: #C9C9C9;
   font-family: 'Roboto';
   padding: 12px 0;
   text-align: center;
+  background-color: #000;
 }
 
 .menu{
@@ -44,6 +55,26 @@
   text-align: center;
 }
 
+.logo{
+  display: flex;
+  align-items: center;
+  svg{
+    margin-right: 13px;
+  }
+  @media screen and (max-width: 1280px){
+    justify-content: center;
+  }
+  @media screen and (max-width: 375px){
+    justify-content: flex-start;
+  }
+}
+
+.titleLogo{
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
 .moscow{
   font-weight: 600;
   font-size: 14.4259px;
@@ -56,36 +87,37 @@
 .desc{
   font-size: 15px;
   line-height: 20px;
-  color: #4D4D4D;
+  color: #fff;
   font-family: 'Roboto';
-  margin-top: 31px;
-  padding: 0 40px;
-  @media screen and (max-width: 1125px){
+  margin-top: 26px;
+  @media screen and (max-width: 1280px){
     display: flex;
     justify-content: center;
   }
   @media screen and (max-width: $sm-min){
     padding: 0;
   }
+  @media screen and (max-width: 375px){
+    justify-content: flex-start;
+  }
 }
 
 .left{
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1125px){
+  @media screen and (max-width: 1280px){
     margin-bottom: 20px;
   }
 }
 
-.phone{
+.email{
   display: flex;
   align-items: center;
-  margin-top: 22px;
-  padding-left: 40px;
+  margin-top: 25px;
   img{
-    margin-right: 16px;
+    margin-right: 15px;
   }
-  @media screen and (max-width: 1125px){
+  @media screen and (max-width: 1280px){
     justify-content: center;
     padding-left: 0;
   }
@@ -106,7 +138,7 @@
 .text{
   font-size: 16px;
   line-height: 19px;
-  color: #4D4D4D;
+  color: #fff;
   font-family: 'Roboto';
   &:hover{
     text-decoration: underline;
@@ -123,9 +155,9 @@
 .icon{
   margin-right: 16px;
   svg{
-    fill: #000;
+    fill: #fff;
     &:hover{
-      fill: #4D4D4D;
+      fill: #E57B7B;
     }
   }
 }
@@ -134,8 +166,9 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
+  color: #fff;
   font-family: 'Roboto';
+  margin-bottom: 3px;
 }
 
 .shop{
@@ -143,10 +176,9 @@
   flex-direction: column;
   .text{
     margin-top: 16px;
-    color: #636363;
   }
   @media screen and (max-width: $sm-min){
-    margin-top: 70px;
+    margin-top: 64px;
   }
 }
 
@@ -157,7 +189,7 @@
 }
 
 .social{
-  margin-top: 19px;
+  margin-top: 16px;
   margin-bottom: 56px;
 }
 
