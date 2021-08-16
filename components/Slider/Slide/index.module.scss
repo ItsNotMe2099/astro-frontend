@@ -29,6 +29,12 @@
   color: #7B91CE;
   margin-top: 10px;
   width: 229px;
+  @media screen and (max-width: 1279px){
+    text-align: center;
+  }
+  @media screen and (max-width: 475px){
+    text-align: unset;
+  }
   @media screen and (max-width: 350px){
     font-size: 12px;
   }
