@@ -65,6 +65,9 @@ const slides = [
             {slides.map(item => <Slide title={item.title} image={item.image} desc={item.desc}/>)}
           </Slider>
         </div>
+        <div className={styles.waves}>
+          <img src='/img/backgrounds/waves.svg' alt=''/>
+        </div>
       </div>
     )
   }
