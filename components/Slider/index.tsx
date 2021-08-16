@@ -2,6 +2,7 @@ import SliderControl from "components/ui/SliderControl";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import styles from './index.module.scss'
+import Slide from "./Slide";
 
 export default function SimpleSlider() {
 
@@ -47,66 +48,21 @@ export default function SimpleSlider() {
       ]
     };
 
+const slides = [
+{title: 'Гороскоп', image: '/img/Slider/horoscope.svg', desc: 'упорядоченное отображение взаимного расположения планет на звёздном небе в определенный'},
+{title: 'Аффирмации', image: '/img/Slider/affirmatio.svg', desc: 'утвердительное суждение. В популярной психологии аффирмация — это позитивное'},
+{title: 'Мудрость', image: '/img/Slider/wisdom.svg', desc: 'Свойство человеческого разума, характеризующееся степенью освоения знаний и подсознательного опыта'},
+{title: 'Исцеление', image: '/img/Slider/healing.svg', desc: 'Доктрина, утверждающая возможность сверхъестественного физического исцеления'},
+{title: 'Нумерология', image: '/img/Slider/numerology.svg', desc: 'вера в религиозные, эзотерические или мистические связи между числами и будущим или характером человека.'},
+{title: 'Календарь красоты', image: '/img/Slider/calendar.svg', desc: 'Женский лунный календарь, советы красоты на каждый день, рекомендации по посещению косметолога'},
+{title: 'Шар предсказаний', image: '/img/Slider/magicBall.svg', desc: 'Особенности конструкции: Фигура с ответами имеет не монолитную конструкцию, а состоит из двух частей'},
+{title: 'Древо жизни', image: '/img/Slider/tree.svg', desc: 'Мифологический образ во многих культурах. В славянской народной традиции вариант мирового древа.'}]
+
     return (
       <div className={styles.root}>
         <div className={styles.container}>
           <Slider {...settings}>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-              <img src='/img/Slider/horoscope.svg'/>
-              </div>
-              <div className={styles.slideTitle}>Гороскоп</div>
-              <div className={styles.slideDesc}>упорядоченное отображение<br/> взаимного расположения<br/> планет на звёздном небе в<br/> определенный </div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-                <img src='/img/Slider/affirmatio.svg' />
-              </div>
-              <div className={styles.slideTitle}>Аффирмации</div>
-              <div className={styles.slideDesc}>утвердительное суждение. В<br/> популярной психологии<br/> аффирмация — это<br/> позитивное</div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-                <img src='/img/Slider/wisdom.svg'/>
-              </div>
-              <div className={styles.slideTitle}>Мудрость</div>
-              <div className={styles.slideDesc}>Свойство человеческого<br/> разума, характеризующееся<br/> степенью освоения знаний и<br/> подсознательного опыта </div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-              <img src='/img/Slider/healing.svg' />
-              </div>
-              <div className={styles.slideTitle}>Исцеление</div>
-              <div className={styles.slideDesc}>Доктрина, утверждающая<br/> возможность<br/> сверхъестественного<br/> физического исцеления </div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-              <img src='/img/Slider/numerology.svg'/>
-              </div>
-              <div className={styles.slideTitle}>Нумерология</div>
-              <div className={styles.slideDesc}>вера в религиозные,<br/> эзотерические или<br/> мистические связи между<br/> числами и будущим или<br/> характером человека.</div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-              <img src='/img/Slider/calendar.svg'/>
-              </div>
-              <div className={styles.slideTitle}>Календарь красоты</div>
-              <div className={styles.slideDesc}>Женский лунный календарь,<br/> советы красоты на каждый<br/> день, рекомендации по<br/> посещению косметолога</div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-              <img src='/img/Slider/magicBall.svg'/>
-              </div>
-              <div className={styles.slideTitle}>Шар предсказаний</div>
-              <div className={styles.slideDesc}>Особенности конструкции:<br/> Фигура с ответами имеет не<br/> монолитную конструкцию, а<br/> состоит из двух частей</div>
-            </div>
-            <div className={styles.slide}>
-              <div className={styles.slideIcon}>
-              <img src='/img/Slider/tree.svg'/>
-              </div>
-              <div className={styles.slideTitle}>Древо жизни</div>
-              <div className={styles.slideDesc}>Мифологический образ во<br/> многих культурах. В<br/> славянской народной<br/> традиции вариант мирового<br/> древа.</div>
-            </div>
+            {slides.map(item => <Slide title={item.title} image={item.image} desc={item.desc}/>)}
           </Slider>
         </div>
       </div>

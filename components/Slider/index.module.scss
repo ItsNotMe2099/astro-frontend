@@ -20,46 +20,6 @@
   margin: 0 auto;
 }
 
-.slide{
-    display: flex !important;
-    flex-direction: column;
-    margin-bottom: 74px;
-    height: 233px;
-    @media screen and (max-width: 1279px){
-      margin-bottom: 40px;
-      align-items: center;
-    }
-}
-.slideTitle{
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 27px;
-  color: #FFFFFF;
-  text-align: left;
-  margin-top: 25px;
-  @media screen and (max-width: 350px){
-    font-size: 20px;
-  }
-}
-
-.slideDesc{
-  font-size: 14px;
-  line-height: 19px;
-  text-align: left;
-  color: #7B91CE;
-  margin-top: 10px;
-  @media screen and (max-width: 350px){
-    font-size: 12px;
-  }
-}
-.slideIcon{
-    display: flex;
-    align-items: center;
-    img{
-      height: 95px;
-    }
-}
-
 .dots{
   margin: 0;
   padding: 0;
