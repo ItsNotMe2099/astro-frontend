@@ -10,7 +10,7 @@ interface Props {}
 export default function Main(props: Props) {
 
   return (
-    <body className={styles.body}>
+    <body className={styles.body} id='main'>
       <div className={styles.root}>
         <div className={styles.cloudsRight}>
           <img src='/img/Main/cloudsRight.svg' alt=''/>

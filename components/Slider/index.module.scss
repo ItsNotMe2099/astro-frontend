@@ -22,6 +22,10 @@
 .waves{
   background-color: #020a1d;
   padding-top: 30px;
+  overflow: hidden;
+  img{
+    margin-bottom: -5px;
+  }
   @media screen and (max-width: 475px){
     img{
       width: 475px;

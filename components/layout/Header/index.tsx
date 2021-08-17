@@ -8,23 +8,26 @@ import cx from 'classnames'
 import { useEffect, useState } from 'react'
 import MenuMobile from 'components/svg/MenuMobile'
 import MenuMobileClose from 'components/svg/MenuMobileClose'
+import { useRouter } from 'next/router'
 
 interface Props {}
 
 export default function Header(props: Props) {
 
-  const options = [{label: 'Гороскоп', link: '#'},
-  {label: 'Аффирмации', link: '#'},
-  {label: 'Мудрость', link: '#'},
-  {label: 'Исцеление', link: '#'},
-  {label: 'Нумерология', link: '#'},
-  {label: 'Календарь красоты', link: '#'},
-  {label: 'Шар предсказаний', link: '#'},
-  {label: 'Древо жизни', link: '#'},
+  const options = [{label: 'Гороскоп', link: '/#horoscope'},
+  {label: 'Аффирмации', link: '/#affirmatio'},
+  {label: 'Мудрость', link: '/#wisdom'},
+  {label: 'Исцеление', link: '/#healing'},
+  {label: 'Нумерология', link: '/#numerology'},
+  {label: 'Календарь красоты', link: '/#calendar'},
+  {label: 'Шар предсказаний', link: '/#ball'},
+  {label: 'Древо жизни', link: '/#tree'},
 ]
 
 const [isScrolled, setIsScrolled] = useState(false)
 const [isMenuMobileOpen, setMenuMobileOpen] = useState(false)
+
+const router = useRouter()
 
 const handleScroll = () => {
   if (window.pageYOffset > 0) {
@@ -65,7 +68,7 @@ useEffect(() => {
     <>
     <div className={cx(styles.desktop, {[styles.scrolled]: isScrolled})}>
       <div className={styles.container}>
-      <Link href="/">
+      <Link href="/#main">
         <a>
         <div className={styles.logo}>
           <Logo/>
@@ -78,7 +81,7 @@ useEffect(() => {
             ...options.map((item, index) => (
               <Link href={item.link}>
                 <a
-                  className={styles.item}
+                  className={cx(styles.item, {[styles.active]: router.asPath === item.link})}
                   href={item.link}
                   ref={nodeRef}
                   key={index + 1}
@@ -114,8 +117,8 @@ useEffect(() => {
     </div>
     <div className={styles.headerMobile}>
         <div className={styles.container}>
-          <Link href="/">
-            <a>
+          <Link href="/#main">
+            <a onClick={isMenuMobileOpen && handleCloseMobileMenu}>
             <div className={styles.logo}>
               <Logo/>
             <div className={styles.title}>Starmoon</div>
@@ -146,7 +149,7 @@ useEffect(() => {
             <div className={styles.list}>
               {options.map((item) => (
                 <Link href={item.link}>
-                  <a onClick={handleClearBodyClass} className={styles.item} href={item.link}>
+                  <a onClick={handleCloseMobileMenu} className={cx(styles.item, {[styles.active]: router.asPath === item.link})} href={item.link}>
                     {item.label}
                   </a>
                 </Link>

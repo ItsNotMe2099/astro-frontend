@@ -3,3 +3,44 @@
 .root{
   
 }
+
+.waves2{
+    background-color: #020a1d;
+    overflow: hidden;
+    img{
+        margin-top: -3%;
+        @media screen and (max-width: 375px){
+            width: 375px;
+        }
+      }
+}
+
+.waves3{
+    background-color: #020a1d;
+    overflow: hidden;
+    img{
+        margin-bottom: -3%;
+        @media screen and (max-width: 375px){
+            width: 375px;
+        }
+      }
+}
+
+.waves{
+    background-color: #020a1d;
+    overflow: hidden;
+    transform: rotate(180deg);
+    img{
+        @media screen and (max-width: 375px){
+            width: 375px;
+        }
+    }
+}
+
+.content{
+    padding-bottom: 100px;
+    background-color: #020a1d;
+    @media screen and (max-width: 375px){
+        padding-bottom: 0;
+    }
+}

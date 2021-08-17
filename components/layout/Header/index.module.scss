@@ -52,10 +52,17 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  &:hover{
+    color: #fff !important;
+  }
   @media screen and (max-width: 850px){
     margin-top: 25px;
     font-size: 20px;
   }
+}
+
+.active{
+  color: #fff !important;
 }
 
 .btns{

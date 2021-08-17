@@ -1,0 +1,145 @@
+@import "scss/index";
+
+.root{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  @media screen and (max-width: 880px){
+    height: auto;
+    position: relative;
+    z-index: 44;
+  }
+  @media screen and (max-width: 860px){
+    flex-direction: column;
+  }
+  @media screen and (max-width: 600px){
+    padding: 0 16px;
+  }
+  @media screen and (max-width: 375px){
+    padding-bottom: 60px;
+  }
+}
+
+.black{
+  background-color: #020a1d !important;
+}
+
+.blue{
+  background-color: #0a0849 !important;
+}
+
+.right{
+  flex-direction: row-reverse;
+  @media screen and (max-width: 1000px){
+    flex-direction: row;
+  }
+  @media screen and (max-width: 860px){
+    flex-direction: column;
+  }
+}
+
+.btn{
+  float: left;
+  @media screen and (max-width: 860px){
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  @media screen and (max-width: 375px){
+    div{
+      width: 100%;
+      button{
+        width: 100%;
+        @media screen and (max-width: 365px){
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.image{
+  width: 745px;
+  @media screen and (max-width: 1300px){
+    width: 545px;
+  }
+  @media screen and (max-width: 1200px){
+    width: 445px;
+  }
+  @media screen and (max-width: 1100px){
+    width: 345px;
+  }
+  @media screen and (max-width: 860px){
+    width: 500px;
+  }
+  @media screen and (max-width: 600px){
+    width: 375px;
+  }
+  @media screen and (max-width: 365px){
+    width: 320px;
+  }
+  img{
+    position: relative;
+    z-index: 22;
+    @media screen and (max-width: 1500px){
+      width: 700px;
+    }
+    @media screen and (max-width: 1300px){
+      width: 500px;
+    }
+    @media screen and (max-width: 1200px){
+      width: 400px;
+    }
+    @media screen and (max-width: 1100px){
+      width: 300px;
+    }
+    @media screen and (max-width: 860px){
+      width: 500px;
+    }
+    @media screen and (max-width: 600px){
+      width: 375px;
+    }
+    @media screen and (max-width: 365px){
+      width: 320px;
+    }
+  }
+}
+
+.text{
+  margin-top: -5%;
+  @media screen and (max-width: 860px){
+    margin-top: 0;
+  }
+  @media screen and (max-width: 860px){
+    text-align: center;
+  }
+  @media screen and (max-width: 500px){
+    text-align: unset;
+  }
+}
+
+.title{
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+  color: #FFFFFF;
+  @media screen and (max-width: 500px){
+    text-align: center;
+  }
+  @media screen and (max-width: 365px){
+    font-size: 30px;
+  }
+}
+
+.desc{
+  font-size: 18px;
+  line-height: 136.9%;
+  color: #7B91CE;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  width: 587px;
+  @media screen and (max-width: 600px){
+    width: auto;
+  }
+}
