@@ -13,14 +13,14 @@ interface Props {
 
 export default function Footer(props: Props) {
 
-  const options = [{label: 'Гороскоп', link: '#'},
-  {label: 'Аффирмации', link: '#'},
-  {label: 'Мудрость', link: '#'},
-  {label: 'Исцеление', link: '#'},
-  {label: 'Нумерология', link: '#'},
-  {label: 'Календарь красоты', link: '#'},
-  {label: 'Шар предсказаний', link: '#'},
-  {label: 'Древо жизни', link: '#'},
+  const options = [{label: 'Гороскоп', link: '/#horoscope'},
+  {label: 'Аффирмации', link: '/#affirmatio'},
+  {label: 'Мудрость', link: '/#wisdom'},
+  {label: 'Исцеление', link: '/#healing'},
+  {label: 'Нумерология', link: '/#numerology'},
+  {label: 'Календарь красоты', link: '/#calendar'},
+  {label: 'Шар предсказаний', link: '/#ball'},
+  {label: 'Древо жизни', link: '/#tree'},
 ]
 
 const about = [{label: 'Веб версия', link: '#'},
