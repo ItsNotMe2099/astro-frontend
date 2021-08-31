@@ -2,9 +2,11 @@ import Content from 'components/Content'
 import Footer from 'components/layout/Footer'
 import Header from 'components/layout/Header'
 import Layout from 'components/layout/Layout'
+import MagicBall from 'components/lottie/components/MagicBall'
 import Main from 'components/Main'
 import SimpleSlider from 'components/Slider'
 import styles from './index.module.scss'
+
 
 export default function Home(props) {
   return (
@@ -53,7 +55,7 @@ export default function Home(props) {
         <div className={styles.waves3} id='ball'>
           <img src='/img/backgrounds/waves.svg' alt=''/>
         </div>
-        <Content image='/img/Content/magicBall.svg' title='ШАР ПРЕДСКАЗАНИЙ' 
+        <Content lottie={<MagicBall/>} image='/img/Content/magicBall.svg' title='ШАР ПРЕДСКАЗАНИЙ' 
         desc='упорядоченное отображение взаимного расположения планет на звёздном небе в определенный промежуток времени по знакам зодиака. Используется в астрологии с целью предсказания судьбы.' 
         color='blue'/>
         <div className={styles.waves2} id='tree'>

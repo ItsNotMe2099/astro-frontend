@@ -128,9 +128,9 @@
   z-index: 1;
   @media screen and (max-width: 475px){
     position: static;
-    img{
-      width: 158px;
-      height: 333px;
+    div{
+      width: 158px !important;
+      height: 333px !important;
       padding-top: 50px;
     }
   }

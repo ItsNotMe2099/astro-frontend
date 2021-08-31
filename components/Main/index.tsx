@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import Link from 'next/link'
 import Button from 'components/ui/Button'
 import { useEffect } from 'react'
+import Stargazer from 'components/lottie/components/Stargazer'
 
 interface Props {}
 
@@ -48,7 +49,7 @@ export default function Main(props: Props) {
               <img src='/img/Main/cloud.svg' alt=''/>
             </div>
             <div className={styles.stargazer}>
-              <img src='/img/Main/stargazer.svg' alt=''/>
+              <Stargazer/>
             </div>
           </div>
         </div>
