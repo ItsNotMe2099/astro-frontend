@@ -105,10 +105,14 @@
 
 .comet{
   margin-right: 8%;
-  animation-duration: 2s;
-  animation-name: slidein;
+  animation-duration: 5s;
+  @media screen and (min-width: 476px){
+    animation-name: slidein;
+  }
   animation-iteration-count: infinite;
+  animation-delay: 5s;
   @media screen and (max-width: 475px){
+    animation-name: slidein2;
     margin-right: 0;
     img{
       width: 65px;
@@ -118,6 +122,17 @@
 }
 
 @keyframes slidein {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  to {
+    transform: translate(-1000%, 1200%);
+    margin-right: 100%;
+  }
+}
+
+@keyframes slidein2 {
   from {
     transform: translate(0%, 0%);
   }
