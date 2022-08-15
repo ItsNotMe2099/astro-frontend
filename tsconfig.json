@@ -19,7 +19,6 @@
     "jsx": "preserve",
     "baseUrl": "."
   },
-  "react/no-unescaped-entities": 0,
   "include": [
     "next-env.d.ts",
     "**/*.ts",
