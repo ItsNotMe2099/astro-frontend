@@ -34,8 +34,8 @@ services:
         environment:
           API_HOST: http://yt-api-nginx
           ADMIN_HOST: http://yt-admin
-          VIRTUAL_HOST: starmoon.club
-          LETSENCRYPT_HOST: starmoon.club
+          VIRTUAL_HOST: starmoonclub.com
+          LETSENCRYPT_HOST: starmoonclub.com
           LETSENCRYPT_EMAIL: sites.globcom@yandex.ru
           VIRTUAL_PORT: 80
 
