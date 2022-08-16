@@ -1,0 +1,30 @@
+@import "scss/index";
+
+.root{
+    max-width: 838px;
+    height: 100%;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.content{
+    margin: 0px auto;
+    font-family: Roboto, Arial;
+    padding: 100px 10px 100px;
+    h2{
+        text-align: center;
+    }
+}
+
+.list{
+    list-style-type: square;
+    li{
+        margin: 16px 0; 
+    }
+}
+
+.contentsNonBlock{
+    text-decoration: underline;
+    color: #fff;
+}

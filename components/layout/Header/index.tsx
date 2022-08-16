@@ -22,6 +22,8 @@ export default function Header(props: Props) {
   {label: 'Календарь красоты', link: '/#calendar'},
   {label: 'Шар предсказаний', link: '/#ball'},
   {label: 'Древо жизни', link: '/#tree'},
+  {label: 'Политика конфиденциальности', link: '/privacy-policy'},
+  {label: 'Пользовательское соглашение', link: '/user-agreement'},
 ]
 
 const [isScrolled, setIsScrolled] = useState(false)
