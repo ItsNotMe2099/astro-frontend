@@ -28,7 +28,9 @@ const about = [{label: 'Веб версия', link: '#'},
   {label: 'Версия для андроид', link: '#'},
   {label: 'О нас', link: '#'},
   {label: 'Оплата', link: '#'},
-  {label: 'Договор', link: '#'}
+  {label: 'Договор', link: '#'},
+  {label: <div className={styles.policy}>Политика<br/> конфиденциальности</div>, link: '/privacy-policy'},
+  {label: <div className={styles.policy}>Пользовательское<br/> соглашение</div>, link: '/user-agreement'},
 ]
 
 const news = [{label: 'Последние новости', link: '#'},
