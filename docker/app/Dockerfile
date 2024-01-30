@@ -1,11 +1,11 @@
 FROM node:lts-alpine
-
+RUN npm install -g npm@8.4.0
 # Setting working directory. All the path will be relative to WORKDIR
 WORKDIR /usr/src/app
 
 # Installing dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm install --force
 
 # Copying source files
 COPY . .
