@@ -1,0 +1,29 @@
+{
+  "name": "astro-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ext js,jsx,ts,tsx --fix"
+  },
+  "dependencies": {
+    "next": "11.0.1",
+    "normalize.css": "^8.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-dynamic-overflow": "^1.1.0",
+    "react-lottie": "^1.2.3",
+    "react-slick": "^0.28.1",
+    "sass": "^1.37.5",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.13",
+    "@types/react": "^17.0.17",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1",
+    "typescript": "^4.3.5"
+  }
+}
